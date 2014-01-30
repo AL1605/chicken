@@ -21,3 +21,5 @@ Route::get('/home', 'SiteController@index'); //คือการกำหนด
 
 //การจัดการผู้ใช้งาน		-ส่วนของการแสดงข้อมูลประเภทผู้ใช้
 Route::get('/userType', 'UserTypeController@index');
+
+//Test

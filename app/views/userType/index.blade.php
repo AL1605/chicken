@@ -19,7 +19,8 @@
 			<tr>
 				<td>{{ $v->name }}</td>
 				<td>
-					{{ HTML::link('userTypeForm/'.$v->id, 'Edit') }} <!--เป็นการแปะจุดลิงค์ Edit ลงไป และส่งค่า $v->id ไปด้วย-->
+					{{ HTML::link('userTypeForm/'.$v->id, 'Edit') }} <!--เป็นการแปะจุดลิงค์ Edit ลงไป และส่งค่า $v->id ไปด้วย--> 
+					| 
 					{{ HTML::link('userTypeDelete/'.$v->id, 'Delete') }} <!--เป็นการแปะจุดลิงค์ Delete ลงไป และส่งค่า $v->id ไปด้วย-->
 				</td>
 			</tr>
