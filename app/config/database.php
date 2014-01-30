@@ -52,14 +52,14 @@ return array(
 			'prefix'   => '',
 		),
 
-		'mysql' => array(
-			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'database',
-			'username'  => 'root',
-			'password'  => '',
-			'charset'   => 'utf8',
-			'collation' => 'utf8_unicode_ci',
+		'mysql' => array( //เป็นการกำหนดว่าจะต่อเข้ากับ MySQL
+			'driver'    => 'mysql', //กำหนดชนิดของ driver เชื่อมต่อเป็น mysql
+			'host'      => 'localhost', //กำหนดให้ต่อเข้าที่ localhost
+			'database'  => 'chicken_db', //กำหนดให้ต่อเข้าไปที่ฐานข้อมูล chicken_db
+			'username'  => 'root', //กำหนด username เป็น root
+			'password'  => '123456', //กำหนด password
+			'charset'   => 'utf8', //กำหนดรูปแบบอักษรเป็น utf8
+			'collation' => 'utf8_unicode_ci', //กำหนดรูปแบบอักษรในการรับ ส่ง ข้อมูลเป็นแบบ utf8_unicode_ci
 			'prefix'    => '',
 		),
 
