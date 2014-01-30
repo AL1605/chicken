@@ -51,7 +51,8 @@ return array(
 			'database' => __DIR__.'/../database/production.sqlite',
 			'prefix'   => '',
 		),
-
+		
+		//การเชื่อมต่อฐานข้อมูล
 		'mysql' => array( //เป็นการกำหนดว่าจะต่อเข้ากับ MySQL
 			'driver'    => 'mysql', //กำหนดชนิดของ driver เชื่อมต่อเป็น mysql
 			'host'      => 'localhost', //กำหนดให้ต่อเข้าที่ localhost

@@ -1,4 +1,4 @@
-@extends('layouts.master') <!--กำหนดการใช้ layout หลัก --> 
+@extends('layouts.master') <!--สร้างหน้าจอสำหรับระบบเลี้ยงไก่--> <!--กำหนดการใช้ layout หลัก --> 
 
 @section('content') <!--กำหนดการแสดงส่วนของ content หลัก-->
 

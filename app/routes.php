@@ -16,4 +16,5 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+//สร้างหน้าจอสำหรับระบบเลี้ยงไก่
 Route::get('/home', 'SiteController@index'); //คือการกำหนด url ให้กับ SiteController@index เป็นชื่อ  /home

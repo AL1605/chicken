@@ -39,6 +39,7 @@ return array(
 	|
 	*/
 
+	//ตั้งค่าวันเวลา Laravel
 	'timezone' => 'Asia/Bangkok', //คือกำหนดรูปแบบเป็น 'Asia/Bangkok' หรือ ประเทศไทยนั่นเอง
 
 	/*

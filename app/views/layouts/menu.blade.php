@@ -1,3 +1,4 @@
+<!--สร้างหน้าจอสำหรับระบบเลี้ยงไก่-->
 <ul class="nav nav-pills nav-stacked menu">
 	<li class="active">
 		<div class="head-menu">
