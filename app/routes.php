@@ -16,5 +16,4 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-
-//Test AL
+Route::get('/home', 'SiteController@index'); //คือการกำหนด url ให้กับ SiteController@index เป็นชื่อ  /home
