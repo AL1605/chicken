@@ -30,3 +30,7 @@ Route::get('/userTypeDelete/{id}', 'UserTypeController@delete');
 
 //การจัดการผู้ใช้งาน		-ส่วนของการแสดงข้อมูลผู้ใช้
 Route::get('/user', 'UserController@index');
+//การจัดการผู้ใช้งาน		-ส่วนของการเพิ่มข้อมูลผู้ใช้
+Route::any('/userForm/{id?}', 'UserController@form');
+//การจัดการผู้ใช้งาน		-ส่วนของการลบข้อมูลผู้ใช้
+Route::get('/userDelete/{id}', 'UserController@delete');
