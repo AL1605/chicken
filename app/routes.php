@@ -23,4 +23,4 @@ Route::get('/', 'SiteController@index'); //คือการกำหนด url
 Route::get('/userType', 'UserTypeController@index');
 
 //การจัดการผู้ใช้งาน		-ส่วนของการเพิ่มข้อมูลประเภทผู้ใช้
-Route::get('/userTypeForm/{id?}', 'UserTypeController@form');
+Route::any('/userTypeForm/{id?}', 'UserTypeController@form');
