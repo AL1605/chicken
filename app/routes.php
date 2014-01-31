@@ -17,9 +17,10 @@ Route::get('/', function()
 });
 
 //สร้างหน้าจอสำหรับระบบเลี้ยงไก่
-Route::get('/home', 'SiteController@index'); //คือการกำหนด url ให้กับ SiteController@index เป็นชื่อ  /home
+Route::get('/', 'SiteController@index'); //คือการกำหนด url ให้กับ SiteController@index เป็นชื่อ  /home
 
 //การจัดการผู้ใช้งาน		-ส่วนของการแสดงข้อมูลประเภทผู้ใช้
 Route::get('/userType', 'UserTypeController@index');
 
-//Test
+//การจัดการผู้ใช้งาน		-ส่วนของการเพิ่มข้อมูลประเภทผู้ใช้
+Route::get('/userTypeForm/{id?}', 'UserTypeController@form');
