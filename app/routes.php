@@ -34,3 +34,7 @@ Route::get('/user', 'UserController@index');
 Route::any('/userForm/{id?}', 'UserController@form');
 //การจัดการผู้ใช้งาน		-ส่วนของการลบข้อมูลผู้ใช้
 Route::get('/userDelete/{id}', 'UserController@delete');
+
+
+//การจัดการฟาร์ม		-ส่วนของการแสดงข้อมูลฟาร์ม
+Route::get('/farm', 'FarmController@index');

@@ -2,7 +2,7 @@
 
 @section('content')<!--เริ่มต้นแสดงผลส่วนของ content-->
 
-<h1>User Type</h1>
+<h1>User</h1>
 <hr />
 {{ HTML::link('userForm', 'Add User', array('class'=>'btn btn-primary')) }} <!--ปุ่ม Add User ลิงค์ ไปยัง userForm-->
 <p />
@@ -16,7 +16,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		@foreach($user as $v) <!--วน loop แสดงข้อมูลของ userType โดยเก็บลงตัวแปร $v แล้วนำไปใช้งาน-->
+		@foreach($user as $v) <!--วน loop แสดงข้อมูลของ user โดยเก็บลงตัวแปร $v แล้วนำไปใช้งาน-->
 			<tr>
 				<td>{{ $v->userType->name }}</td>
 				<td>{{ $v->name }}</td>
