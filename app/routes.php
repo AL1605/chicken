@@ -54,3 +54,9 @@ Route::any('/orderBabyForm', 'OrderController@orderBabyForm');
 Route::get('/orderFood', 'OrderController@orderFood');
 //ระบบจัดซื้ออาหาร		-ส่วนของการสั่งซื้ออาหาร
 Route::any('/orderFoodForm', 'OrderController@orderFoodForm');
+
+
+//ระบบผู้บริหาร		-ส่วนของการขอซื้อลูกไก่
+Route::get('/babyList', 'ManagerController@babyList');
+Route::get('/babyApprove/{id}', 'ManagerController@babyApprove');
+Route::get('/babyNoApprove/{id}', 'ManagerController@babyNoApprove');
