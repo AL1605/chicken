@@ -52,3 +52,5 @@ Route::any('/orderBabyForm', 'OrderController@orderBabyForm');
 
 //ระบบจัดซื้ออาหาร		-ส่วนของการขอซื้ออาหาร
 Route::get('/orderFood', 'OrderController@orderFood');
+//ระบบจัดซื้ออาหาร		-ส่วนของการสั่งซื้ออาหาร
+Route::any('/orderFoodForm', 'OrderController@orderFoodForm');
