@@ -38,3 +38,7 @@ Route::get('/userDelete/{id}', 'UserController@delete');
 
 //การจัดการฟาร์ม		-ส่วนของการแสดงข้อมูลฟาร์ม
 Route::get('/farm', 'FarmController@index');
+//การจัดการฟาร์ม		-ส่วนของการเพิ่มข้อมูลฟาร์ม
+Route::any('/farmForm/{id?}', 'FarmController@form');
+//การจัดการฟาร์ม		-ส่วนของการลบข้อมูลฟาร์ม
+Route::get('/farmDelete/{id}', 'FarmController@delete');

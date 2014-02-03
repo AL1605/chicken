@@ -14,7 +14,7 @@ class UserController extends Controller{ //สร้าง class UserController 
 			$user = new User; //สร้าง user ขึ้นมา เพื่อเป็นการสร้างรายการใหม่
 		}
 		else{
-			$user = User::find($id); //ทำการค้นรายการเดิมข้นมา เพ่ือจะแก้ไขข้อมูล
+			$user = User::find($id); //ทำการค้นรายการเดิมข้นมา เพื่อจะแก้ไขข้อมูล
 		}
 		
 		if(Input::all()){ //ตรวจสอบว่ามีการส่งข้อมูลเข้ามา
