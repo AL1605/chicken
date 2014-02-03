@@ -42,3 +42,9 @@ Route::get('/farm', 'FarmController@index');
 Route::any('/farmForm/{id?}', 'FarmController@form');
 //การจัดการฟาร์ม		-ส่วนของการลบข้อมูลฟาร์ม
 Route::get('/farmDelete/{id}', 'FarmController@delete');
+
+
+//ระบบการจัดซื้อ		-ส่วนของการขอซื้อลูกไก่
+Route::get('/orderBaby', 'OrderController@orderBaby');
+//ระบบจัดซื้อ			-ส่วนของการสั่งซื้อลูกไก่
+Route::any('/orderBabyForm', 'OrderController@orderBabyForm');
