@@ -44,7 +44,11 @@ Route::any('/farmForm/{id?}', 'FarmController@form');
 Route::get('/farmDelete/{id}', 'FarmController@delete');
 
 
-//ระบบการจัดซื้อ		-ส่วนของการขอซื้อลูกไก่
+//ระบบจัดซื้อไก่		-ส่วนของการขอซื้อลูกไก่
 Route::get('/orderBaby', 'OrderController@orderBaby');
-//ระบบจัดซื้อ			-ส่วนของการสั่งซื้อลูกไก่
+//ระบบจัดซื้อไก่		-ส่วนของการสั่งซื้อลูกไก่
 Route::any('/orderBabyForm', 'OrderController@orderBabyForm');
+
+
+//ระบบจัดซื้ออาหาร		-ส่วนของการขอซื้ออาหาร
+Route::get('/orderFood', 'OrderController@orderFood');

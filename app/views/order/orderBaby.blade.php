@@ -1,10 +1,10 @@
-@extends('layouts.master') <!--ระบบการจัดซื้อ		-ส่วนของการขอซื้อลูกไก่-->		<!--เป็นการเรียกใช้ template-->
+@extends('layouts.master') <!--ระบบการจัดซื้อไก่		-ส่วนของการขอซื้อลูกไก่-->		<!--เป็นการเรียกใช้ template-->
 
 @section('content')<!--เริ่มต้นแสดงผลส่วนของ content-->
 
 <h1>Order Baby</h1>
 <hr />
-{{ HTML::link('orderBabyForm', 'Add Order Baby', array('class'=>'btn btn-primary')) }} <!--ปุ่ม Add Order Baby ลิงค์ ไปยัง userForm-->
+{{ HTML::link('orderBabyForm', 'Add Order Baby', array('class'=>'btn btn-primary')) }} <!--ปุ่ม Add Order Baby ลิงค์ ไปยัง orderBabyForm-->
 <p />
 
 <table class="table table-bordered table-chicken">
