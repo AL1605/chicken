@@ -60,3 +60,9 @@ Route::any('/orderFoodForm', 'OrderController@orderFoodForm');
 Route::get('/babyList', 'ManagerController@babyList');
 Route::get('/babyApprove/{id}', 'ManagerController@babyApprove');
 Route::get('/babyNoApprove/{id}', 'ManagerController@babyNoApprove');
+
+
+//ระบบผู้บริหาร		-ส่วนของการขอซื้ออาหาร
+Route::get('/foodList', 'ManagerController@foodList');
+Route::get('/foodApprove/{id}', 'ManagerController@foodApprove');
+Route::get('/foodNoApprove/{id}', 'ManagerController@foodNoApprove');

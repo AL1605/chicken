@@ -26,8 +26,8 @@ class ManagerController extends Controller{ //สร้าง class ชื่อ
 					
 					$chicken->save();
 				}
+				return Redirect::to('babyList'); //เมื่อสร้างลูกไก่จนครบก็จะแสดงหน้าจอ babyList
 			}
-			return Redirect::to('babyList'); //เมื่อสร้างลูกไก่จนครบก็จะแสดงหน้าจอ babyList
 		}
 	}
 
@@ -40,6 +40,39 @@ class ManagerController extends Controller{ //สร้าง class ชื่อ
 			
 			if($data->save()){ //ทำการบันทึกรายการ
 				return Redirect::to('babyList'); //เมื่อบันทึกรายการให้ไปที่หน้า babyList
+			}
+		}
+	}
+	
+	//ระบบผู้บริหาร		-การดึงข้อมูลรายการขอซื้ออาหาร
+	public function foodList(){ //สร้าง function ชื่อ babyList
+		$foodList = Food::where('approved', '=', 'wait')->get(); //ดึงข้อมูลการขอซื้ออาหารโดยดึงเฉพาะรายการที่ยังไม่ได้อนุมัติ  เก็บลงที่ตัวแปร $foodList
+		
+		return View::make('manager/foodList')->with('foodList', $foodList); //ส่งตัวแปร $foodList มาแสดงที่หน้าจอรายการขอซื้ออาหาร
+	}
+	
+	//ระบบผู้บริหาร		-สถานะการอนุมัติรายการขอซื้ออาหาร
+	public function foodApprove($id=null){ //สร้าง function ชื่อ foodApprove โดยกำหนดตัวแปร $id มีค่าเป็น null
+		$data = Food::find($id); //ดึงรายการขอซื้ออาหารจาก $id ที่ส่งมาเก็บลงในตัวแปร $data
+		
+		if(!empty($data)){ //เช็คตัวแปร $data ต้องมีข้อมูลจึงจะไปสู่เงื่อนไขต่อไป
+			$data->approved = 'yes'; //เปลี่ยนสถานะเป็น อนุมัติ
+			
+			if($data->save()){ //บันทึกข้อมูลรายการขอซื้ออาหาร
+				return Redirect::to('foodList'); //เมื่อสร้างลูกไก่จนครบก็จะแสดงหน้าจอ foodList
+			}
+		}
+	}
+
+	//ระบบผู้บริหาร		-สถานะการไม่อนุมัติรายการขอซื้ออาหาร
+	public function foodNoApprove($id=null){ //สร้าง function ชื่อ foodNoApprove โดยกำหนดตัวแปร $id มีค่าเป็น null
+		$data = Food::find($id); //ดึงรายการขอซื้ออาหารจาก $id ที่ส่งมาเก็บลงในตัวแปร $data
+		
+		if(!empty($data)){ //เช็คตัวแปร $data ต้องมีข้อมูลจึงจะไปสู่เงื่อนไขต่อไป
+			$data->approved = 'no'; //เปลี่ยนสถานะเป็น ไม่อนุมัติ
+			
+			if($data->save()){ //ทำการบันทึกรายการ
+				return Redirect::to('foodList'); //เมื่อบันทึกรายการให้ไปที่หน้า foodList
 			}
 		}
 	}
