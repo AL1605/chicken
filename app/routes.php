@@ -66,3 +66,7 @@ Route::get('/babyNoApprove/{id}', 'ManagerController@babyNoApprove');
 Route::get('/foodList', 'ManagerController@foodList');
 Route::get('/foodApprove/{id}', 'ManagerController@foodApprove');
 Route::get('/foodNoApprove/{id}', 'ManagerController@foodNoApprove');
+
+
+//ระบบเลี้ยงไก่		-ให้อาหารไก่
+Route::get('/feedList', 'ChickenController@feedList');
