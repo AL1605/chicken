@@ -3,15 +3,15 @@
 @section('content') <!--กำหนดให้เริ่มแสดงผล content-->
 
 <h1>Chicken For Feed</h1>
-<hr />
+<hr/>
 
 {{ Form::open(array('class'=>'form-horizontal')) }} <!--เริ่มต้นการทำงานของ form-->
 
 	<div class="control-group">
 		<label for="farm_id" class="control-label">Farm</label>
 		<div class="controls">
-			{{ Form::select('farm_id', Farm::lists('name', 'id')), $farm_id }} <!--select box ข้อมูลฟาร์ม-->
-			{{ Form::submit('Search', array('class'=>'btn btn-success)) }} <!--Submit ปุ่ม Search-->
+			{{ Form::select('farm_id', Farm::lists('name', 'id'), $farm_id) }} <!--select box ข้อมูลฟาร์ม-->
+			{{ Form::submit('Search', array('class'=>'btn btn-success')) }} <!--Submit ปุ่ม Search-->
 		</div>
 	</div>
 	
