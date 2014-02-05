@@ -23,5 +23,26 @@ class ChickenController extends Controller{ //สร้าง class ChickenContr
 			->with('chicken', $chicken)
 			->with('farm_id', $farm_id);
 	}
+
+	public function feedForm($id=null){ //สร้าง function feedForm() และให้ตัวแปร $id มีค่าเป็น null
+		$feed = new FeedFood; //สร้าง model ชื่อ FeedFood เก็บลงตัวแปร $feed
+		
+		if(Input::all()){ //ตรวจสอบค่าเงื่อนไขกรณีที่มีการส่งค่ามาจาก view 
+			$feed->chicken_id = $id;					//กำหนดข้อมูลจาก input ใส่ที่ตัวแปร $feed
+			$feed->food_id = Input::get('food_id');
+			$feed->feed = Input::get('feed');
+			$feed->create = Input::get('create');
+			
+			if($feed->save()){ //บันทึกข้อมูลการให้อาหารไก่
+				$food = Food::find(Input::get('food_id'));				// *เป็นการตัดปริมาณตอนที่ขอซื้อเข้ามาลดลง				
+				$food->amount = ($food->amount - Input::get('feed'));	// **(เมื่ออาหาร อาหารที่เคยให้ก็ลดลง)
+																		
+				if($food->save()){										// ***และทำการบันทึกเพื่ออัพเดทจำนวนล่าสุด
+					return Redirect::to('feedList');					// ****และเมื่อครบกระบวนการแล้วก็จะไปหน้า feedList
+				}
+			}
+		}
+		return View::make('chicken/feedForm');
+	}
 }
 ?>
